@@ -9,7 +9,7 @@ Feature: Login Netflix web application for the valid user
     When Next button should be displayed
     Then Click on the next button
     When Choose your plan page should open "Choose your plan."
-    Then Click on next button
+    Then Click on next button again
     Then Planning page should open "Choose the plan that’s right for you"
     And Close browser
 

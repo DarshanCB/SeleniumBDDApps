@@ -82,7 +82,7 @@ public class NetflixLoginPageValidation {
     }
 
 
-    @Then("^Click on next button$")
+    @Then("^Click on next button again$")
     public void click_on_next_button() throws Throwable
     {
         driver.findElement(By.xpath("//*[@id=\"appMountPoint\"]/div/div/div[2]/div/div[2]/button")).click();

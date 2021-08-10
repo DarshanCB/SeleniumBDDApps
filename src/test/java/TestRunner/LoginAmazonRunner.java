@@ -7,10 +7,9 @@ import org.junit.runner.RunWith;
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = {"src/test/java/features/NetflixLoginPageValidation.feature"},
+@CucumberOptions(features = {"src/test/java/features/loginPage.feature"},
         glue = {"StepDefinitions"},
         plugin = {"pretty", "html:reports/CucumberLoginReport.html"},
         monochrome = true)
-
-public class LoginNetflixRunner {
+public class LoginAmazonRunner {
 }
