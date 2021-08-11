@@ -21,7 +21,6 @@ public class LoginAPI {
         System.out.println(response.getTime());
         Assert.assertEquals(response.getStatusCode(), 200);
 
-
     }
 
     @Test
