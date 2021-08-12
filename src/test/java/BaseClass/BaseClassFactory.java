@@ -14,5 +14,8 @@ import org.testng.annotations.Test;
 
 public class BaseClassFactory {
 
-    protected static final String BASE_ENDPOINT = "https://github.com";
+    protected static final String BASE_ENDPOINT = "https://github.com/";
+    protected static final String GOOGLE_ENDPOINT = "https://google.com/";
+    protected static final String MY_GITHUB = "https://github.com/DarshanCB/";
 }
+
