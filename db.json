@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "firstName": "Darshan",
+      "lastName": "ChickmagalurBasavraju",
+      "subjectId": 1,
+      "id": 1
+    },
+    {
+      "firstName": "Mertens",
+      "lastName": "Sven",
+      "subjectId": 3,
+      "id": 3
+    },
+    {
+      "firstName": "Albert",
+      "lastName": "Einstein",
+      "subjectId": 5,
+      "id": 5
+    },
+    {
+      "firstName": "Sunil Kumar",
+      "lastName": "Gaja",
+      "subjectId": 1,
+      "id": 10
+    },
+    {
+      "firstName": "Ravi",
+      "lastName": "CR",
+      "subjectId": 1,
+      "id": 11
+    }
+  ],
+  "subjects": [
+    {
+      "name": "Automation",
+      "id": 1
+    },
+    {
+      "name": "DevOps",
+      "id": 2
+    },
+    {
+      "name": "Development",
+      "id": 3
+    },
+    {
+      "empty": false,
+      "id": 4
+    },
+    {
+      "empty": false,
+      "id": 5
+    },
+    {
+      "name": "Darshu",
+      "id": 6
+    },
+    {
+      "name": "Vinay",
+      "id": 7
+    }
+  ]
+}
