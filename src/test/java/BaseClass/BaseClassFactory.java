@@ -19,6 +19,9 @@ public class BaseClassFactory {
     protected static final String MY_GITHUB = "https://github.com/DarshanCB/";
     protected static final String LOCAL_APP = "https://reqres.in/api/users?page=2";
     protected static final String NODE_JS = "http://localhost:3000";
+    protected static final String USERS = "https://reqres.in/api/users";
+
+
 
 }
 
