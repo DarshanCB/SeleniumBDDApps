@@ -2,13 +2,15 @@ package REST_API;
 
 
 import static io.restassured.RestAssured.*;
+
+import BaseClass.BaseClassFactory;
 import io.restassured.response.Response;
 import static io.restassured.matcher.RestAssuredMatchers.*;
 import static org.hamcrest.Matchers.*;
 import org.junit.Assert;
 import org.testng.annotations.Test;
 
-public class LoginAPI {
+public class LoginAPI extends BaseClassFactory {
 
     @Test
     void loginValidation()
@@ -24,9 +26,15 @@ public class LoginAPI {
     }
 
     @Test
-    void apivalidation(){
-        given().get("https://reqres.in/api/users?page=2").then().
-                statusCode(200).body("data.id[0]", equalTo(7));
+    public void TestMultipleContents(){
+        given().get("https://reqres.in/api/users/").then().
+                statusCode(200).
+                body("data.email", hasItems("charles.morris@reqres.in",
+                        "george.bluth@reqres.in", "janet.weaver@reqres.in",
+                        "emma.wong@reqres.in", "eve.holt@reqres.in",
+                        "charles.morris@reqres.in", "tracey.ramos@reqres.in"));
     }
+
+
 
 }

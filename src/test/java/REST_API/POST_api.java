@@ -2,6 +2,7 @@ package REST_API;
 
 import static io.restassured.RestAssured.*;
 
+import BaseClass.BaseClassFactory;
 import io.restassured.response.Response;
 import static io.restassured.matcher.RestAssuredMatchers.*;
 import static org.hamcrest.Matchers.*;
@@ -15,7 +16,7 @@ import org.testng.annotations.Test;
 import java.util.HashMap;
 import java.util.Map;
 
-public class POST_api
+public class POST_api extends BaseClassFactory
 {
     @Test
     public void post_test()
@@ -35,4 +36,13 @@ public class POST_api
                 post("https://reqres.in/api/users").then().statusCode(201);
 
     }
+
+    @Test
+    public void test_StatusCode()
+    {
+        when().get(NODE_JS + "/users/" + 11).then().statusCode(200).
+        body("firstName", equalTo("darshan")).log().all();
+    }
+
+
 }

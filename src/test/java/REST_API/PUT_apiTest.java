@@ -18,10 +18,10 @@ public class PUT_apiTest extends BaseClassFactory {
     @Test
     public void put_test()
     {
-        Map<String, Object> map = new HashMap<String, Object>();
+        HashMap<String, Object> map = new HashMap<String, Object>();
         JSONObject request = new JSONObject(map);
         request.put("firstName", "darshan");
-        request.put("lastName", "Automation_Engineer");
+        request.put("lastName", "Automation");
 
         System.out.println(request.toJSONString());
 

@@ -20,7 +20,7 @@ public class PATCH_api {
     @Test
     public void patch_test()
     {
-        Map<String, Object> map = new HashMap<String, Object>();
+        HashMap<String, Object> map = new HashMap<String, Object>();
         JSONObject request = new JSONObject(map);
         request.put("name", "darshancb");
         request.put("job", "basavaraju");
