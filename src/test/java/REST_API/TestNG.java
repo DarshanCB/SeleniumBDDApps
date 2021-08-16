@@ -1,5 +1,6 @@
 package REST_API;
 
+import TestNG_Functions.TestPriority;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -14,12 +15,16 @@ import org.testng.asserts.SoftAssert;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import REST_Utilities.DuplicateUserException;
+import TestNG_Functions.TestPriority.*;
 
-public class TestNG {
+
+public class TestNG implements TestPriority {
 
     UserManager um;
     CloseableHttpClient client;
     CloseableHttpResponse response;
+
+
 
     @BeforeMethod
     public void setUp(Method testMethod) throws IOException {
@@ -37,7 +42,7 @@ public class TestNG {
         }
     }
 
-    @Test(description = "Verify the response should return true")
+    @Test(description = "Verify the response should return true", priority = MEDIUM)
     public void HardAssertStopsImmediately() throws IOException, InterruptedException {
 
         Thread.sleep(1000);
@@ -46,7 +51,7 @@ public class TestNG {
 
     }
 
-    @Test(description = "Git hub endpoint is validated")
+    @Test(description = "Git hub endpoint is validated", priority = HIGH)
     public void gitHubValidation() throws IOException {
         //Act
         response = client.execute(new HttpGet("https://github.com/DarshanCB"));
@@ -56,7 +61,7 @@ public class TestNG {
         Assert.assertEquals(actualStatusCode, 200);
     }
 
-    @Test(description = "   Soft assertion is needed in order to verify the user respectively")
+    @Test(description = "   Soft assertion is needed in order to verify the user respectively", priority = MEDIUM)
     public void softAsset() throws IOException {
 
 
@@ -69,7 +74,7 @@ public class TestNG {
 
     }
 
-    @Test(description = "Verify the added user method returns true successfully")
+    @Test(description = "Verify the added user method returns true successfully", priority = LOW)
     public void successfulAddUserReturnTrue() throws DuplicateUserException {
         //Arrange
         UserManager um = new UserManager();
@@ -82,7 +87,7 @@ public class TestNG {
 
     }
 
-    @Test(description = "Get that desired user respectively")
+    @Test(description = "Get that desired user respectively", priority = LOW)
     public void getUserReturnExistingSavedUser() throws DuplicateUserException {
         //Arrange
         UserManager um = new UserManager();
@@ -93,7 +98,7 @@ public class TestNG {
         Assert.assertEquals(user, "Vinay@gmail.com");
     }
 
-    @Test(description = "Non existing user must return Null")
+    @Test(description = "Non existing user must return Null", priority = LOW)
     public void getNonExistingUserReturnNull(){
         //Arrange
         //Act
@@ -104,14 +109,14 @@ public class TestNG {
 
 
 
-    @Test(description = "Duplicates found")
+    @Test(description = "Duplicates found", priority = LOW)
     public void addDuplicateCustomexception() throws DuplicateUserException {
         um.addUser("darshancbecenggfzgz@gmail.com");
     }
 
 
 
-    @Test(description = "Not a valid email address", expectedExceptions = DuplicateUserException.class)
+    @Test(description = "Not a valid email address", expectedExceptions = DuplicateUserException.class, priority = LOW)
     public void NotavalidEmailandCheck() throws DuplicateUserException {
         um.addUser("darshancom");
     }
