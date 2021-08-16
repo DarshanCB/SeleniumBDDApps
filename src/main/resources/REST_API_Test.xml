@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="All Tests">
-    <test name="REST_API">
+    <test name="REST_API" parallel="true">
         <packages>
             <package name="REST_Assured.*"></package>
         </packages>
