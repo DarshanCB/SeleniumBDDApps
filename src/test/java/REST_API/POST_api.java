@@ -18,7 +18,7 @@ import java.util.Map;
 
 public class POST_api extends BaseClassFactory
 {
-    @Test
+    @Test(timeOut = 7000, enabled = true)
     public void post_test()
     {
         Map<String, Object> map = new HashMap<String, Object>();
@@ -37,7 +37,7 @@ public class POST_api extends BaseClassFactory
 
     }
 
-    @Test
+    @Test(timeOut = 7000, enabled = true)
     public void test_StatusCode()
     {
         when().get(NODE_JS + "/users/" + 11).then().statusCode(200).
