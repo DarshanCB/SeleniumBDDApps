@@ -9,6 +9,8 @@ import org.openqa.selenium.interactions.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import java.util.function.Supplier;
+import java.util.function.Consumer;
 
 
 public class CalculationSteps {
