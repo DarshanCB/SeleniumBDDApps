@@ -1,34 +1,11 @@
-pipeline{
+pipeline {
     agent any
 
     stages {
-
-        stage ('Compile Stage') {
-
+        stage('Verify Branch') {
             steps {
-
-                withMaven(maven: 'maven_3_8_1') {
-                    sh 'mvn clean install'
-                }
+                echo $GIT_BRANCH
             }
         }
-    stage ('Test Stage') {
-
-                steps {
-
-                    withMaven(maven: 'maven_3_8_1') {
-                        sh 'mvn test'
-                    }
-                }
-            }
-    stage ('Cucumber Reports')
-    {
-    steps {
-              cucumber buildStatus: "UNSTABLE",
-                    fileIncludePattern: "**/cucumber.json",
-                    jsonReportDirectory: 'reports'
-                    }
-                }
-
     }
 }
