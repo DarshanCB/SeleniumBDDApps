@@ -1,12 +1,9 @@
 package REST_API;
 
 import BaseClass.BaseClassFactory;
-import org.json.simple.JSONObject;
 import org.testng.annotations.Test;
 import static io.restassured.RestAssured.*;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
-import io.restassured.response.Response;
-import io.restassured.RestAssured;
 import static org.hamcrest.Matchers.*;
 
 public class JSONschemaValidator extends BaseClassFactory {
