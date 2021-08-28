@@ -1,0 +1,168 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-08-22T21:42:12.431Z",
+        "line": 3,
+        "name": "Login netflix web application with valid user name and password",
+        "description": "",
+        "id": "login-netflix-web-application-for-the-valid-user;login-netflix-web-application-with-valid-user-name-and-password",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 16202775167,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Launch chrome browser",
+            "match": {
+              "location": "NetflixLoginPageValidation.launch_chrome_browser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1723900542,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Input valid email \"darshancbeceng@gmail.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "darshancbeceng@gmail.com",
+                  "offset": 19
+                }
+              ],
+              "location": "NetflixLoginPageValidation.input_valid_email_darshancbeceng_gmail_com(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 7584613833,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Click on the getstarted button",
+            "match": {
+              "location": "NetflixLoginPageValidation.click_on_the_getstarted_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 590481875,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Input valid password \"**qwER1234##\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "**qwER1234##",
+                  "offset": 22
+                }
+              ],
+              "location": "NetflixLoginPageValidation.input_valid_password_qwER1234(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 51238708,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Next button should be displayed",
+            "match": {
+              "location": "NetflixLoginPageValidation.next_button_should_be_displayed()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4082413083,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Click on the next button",
+            "match": {
+              "location": "NetflixLoginPageValidation.click_on_the_next_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 89218541,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Choose your plan page should open \"Choose your plan.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Choose your plan.",
+                  "offset": 35
+                }
+              ],
+              "location": "NetflixLoginPageValidation.choose_your_plan_page_should_open(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3730679875,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Click on next button again",
+            "match": {
+              "location": "NetflixLoginPageValidation.click_on_next_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 112688875,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Planning page should open \"Choose the plan that’s right for you\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Choose the plan that’s right for you",
+                  "offset": 27
+                }
+              ],
+              "location": "NetflixLoginPageValidation.planning_page_should_open(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 478832167,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Close browser",
+            "match": {
+              "location": "NetflixLoginPageValidation.close_browser()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Login Netflix web application for the valid user",
+    "description": "",
+    "id": "login-netflix-web-application-for-the-valid-user",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/NetflixLoginPageValidation.feature",
+    "tags": []
+  }
+]
